@@ -1,0 +1,77 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background */
+}
+
+.coach-card {
+    border: none; /* Remove default Bootstrap border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensure content stays within card bounds */
+}
+
+.coach-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.coach-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.coach-card .card-body {
+    padding: 1.5rem;
+}
+
+.coach-card .card-title {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.coach-card .card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.coach-card .list-unstyled li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Theme Specific Styles */
+.baseball-theme {
+    background-image: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold/Orange */
+    color: #333;
+}
+
+.baseball-theme .card-title, .baseball-theme li {
+    color: #333;
+}
+
+.basketball-theme {
+    background-image: linear-gradient(135deg, #FF4500 0%, #FF8C00 100%); /* Orange/DarkOrange */
+    color: #fff;
+}
+
+.basketball-theme .card-title, .basketball-theme li {
+    color: #fff;
+}
+
+.soccer-theme {
+    background-image: linear-gradient(135deg, #00FF00 0%, #008000 100%); /* LimeGreen/Green */
+    color: #fff;
+}
+
+.soccer-theme .card-title, .soccer-theme li {
+    color: #fff;
+}
+
+/* High-Visibility Adjustments (Example for text over yellow) */
+.baseball-theme .card-text, .baseball-theme .list-unstyled li strong {
+    color: #555; /* Darker text for better contrast on light backgrounds */
+}
